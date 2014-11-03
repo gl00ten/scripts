@@ -15,7 +15,7 @@ class fixlamachine {
   #bundle exec rake
   #~~~~~~ 
   
-  # this wont work, something about not having gem
+  # this wont work, something about not having gem, btw, installing gem tends to break puppet to. joy!
   package { 'puppet-lint':
 	  ensure   => '1.1.0',
 	  provider => 'gem',
