@@ -12,7 +12,7 @@ def humanScrambleWord(word):
         suffix = word[-1]
         word = word[:-1]
     if len(word) <= 3:
-        return word + suffix
+        return word
     else:
         middle = word[1:-1]
         return str(word[0] + scrambleString(middle) + word[-1] + suffix)
