@@ -1,27 +1,21 @@
+import random
 def humanScramble(phrase):
-    scrambledPhrase = ""    
-    for word in phrase:
-        scrambledPhrase = scrambledPhrase + humanScrambleWord(word)
-    print(scrambledPhrase)
+    l_phrase = phrase.split(' ')
+    scrambled = []
+    for word in l_phrase:
+        scrambled.append(humanScrambleWord(word))
+    return ' '.join(scrambled)
 
 def humanScrambleWord(word):
-    firstLetter = word[0]
-    if len(word) > 1:
-        lastLetter = word[-1]
+    suffix = ''
+    if word[-1] in [',','.']:
+        suffix = word[-1]
+        word = word[:-1]
+    if len(word) <= 3:
+        return word
     else:
-        lastLetter = ''
-    partOfWordToScramble = word[1:-1]
-    scrambledPart = scrambleString(partOfWordToScramble)
-    return firstLetter+scrambledPart+lastLetter
+        middle = word[1:-1]
+        return str(word[0] + scrambleString(middle) + word[-1] + suffix)
 
-def scrambleString(string):
-    originalString = string
-    scrambledString = []
-        
-    return str(scrambledString)
-
-print('''humanScramble('1234 5678 9876')''')
-print(humanScramble('x y z'))
-
-print('''humanScrambleWord('banana')''')
-print(humanScrambleWord('banana'))
+def scrambleString(s):
+    return ''.join(random.sample(s,len(s)))
