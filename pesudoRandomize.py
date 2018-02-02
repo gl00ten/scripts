@@ -8,7 +8,7 @@ def humanScramble(phrase):
 
 def humanScrambleWord(word):
     suffix = ''
-    if word[-1] in [',','.']:
+    if word[-1] in [';','.']:
         suffix = word[-1]
         word = word[:-1]
     if len(word) <= 3:
