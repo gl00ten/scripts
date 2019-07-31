@@ -1,4 +1,6 @@
 #change this code so it can receive n lists (probably easier to do in haskell)
+# note: this is easier to do with sets
+
 
 import copy
 
