@@ -1,7 +1,3 @@
-#change this code so it can receive n lists (probably easier to do in haskell)
-# note: this is easier to do with sets
-
-
 def removedups(list1, list2):
     set1, set2 = set(list1), set(list2)
     commonSet = set1 & set2
